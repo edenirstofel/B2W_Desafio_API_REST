@@ -26,5 +26,5 @@ Remover planeta : (DELETE) http://localhost:8080/planetas/{id}
 
 Consumindo a API de terceiro: https://swapi.co/ :
 
-Ao salvar planeta, ele se comunica com API do Star Wars, obtem a quantidade de aparições e finaliza o processo de salvar.# desafioB2W_api_rest
+Ao salvar planeta, ele se comunica com API do Star Wars, obtem a quantidade de aparições e finaliza o processo de salvar.
 
