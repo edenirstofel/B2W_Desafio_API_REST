@@ -1,4 +1,4 @@
-#** **Desafio  B2W Api Rest
+#**Desafio  B2W Api Rest
 
 #** **Descrição
 
