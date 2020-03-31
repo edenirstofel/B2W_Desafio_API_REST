@@ -29,3 +29,4 @@ Consumindo a API de terceiro: https://swapi.co/ :
 Ao salvar planeta, ele se comunica com API do Star Wars, obtem a quantidade de aparições e finaliza o processo de salvar.
 
 # edenirstofel-desafioB2W_api_rest
+# Desafio_b2w_api_starWars
