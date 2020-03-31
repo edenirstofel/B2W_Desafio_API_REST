@@ -1,34 +1,79 @@
-# desafioB2W_api_rest
-Tecnologias utilizadas:
+#** **Desafio  B2W Api Rest
 
-*Java 8 *Spring Boot *Spring Data MongoDB
+#** **Descrição
 
-Obs: para executar a API foi utilizada aIDE Spring Tool Suit (STS)
+Criar um jogo com algumas informações da franquia. Para possibilitar  a equipe de front criar essa aplicação, queremos desenvolver uma API que contenha os dados dos planetas.
 
-Informações Importantes para uso da API:
 
-Para utilizar a API é necessário configurar o servidor do MongoDB.
-Arquivo de configuração application.properties do Spring: spring.data.mongodb.host=localhost spring.data.mongodb.port=27017 spring.data.mongodb.database=b2w
+#** **Tecnologias utilizadas
 
-EndPoints da API :
+-Java 1.8
+-Spring Data MongoDB 
+-Spring Boot 2.2.5
+-Junit4
+-Postman
+-IDEA Spring Tool Suit 4 (STS)
 
-Listar os planetas Salvos : (GET) http://localhost:8080/planetas
 
-Salvar um determinado planteta : (POST) http://localhost:8080/planetas Informando um JSON:
+#** **Informações para utilizar a API 
 
-{ "nome": "Terra", "clima": "tropical", "terreno": "arido" }
+-Para utilizar a API é necessário configurar o servidor do MongoDB
+-A API está considerando que o mongodb local estará na sua porta padrão (27017)
+-Arquivo de configuração application.properties do Spring : spring.data.mongodb.uri=mongodb://localhost:27017/apistarwars
 
-Buscar um planeta por id : (GET) http://localhost:8080/planetas/{id}
 
-Busca um planeta po nome : (GET) http://localhost:8080/planetas/{nome}/nome
+#** **Funcionalidades desenvolvidas 
+- Adicionar um planeta (com nome, clima e terreno)
+(ao adicinar um planeta a API se comunica com API do Star Wars (https://swapi.co/),obtem a quantidade de aparições e finaliza o processo de salvar)
+- Listar planetas
+- Buscar por nome
+- Buscar por ID
+- Remover planeta
 
-Remover planeta : (DELETE) http://localhost:8080/planetas/{id}
+#** **API Rest
 
-Consumindo a API de terceiro: https://swapi.co/ :
+-** **Adicionar um planeta: http://localhost:8080/planetas 
 
-Ao salvar planeta, ele se comunica com API do Star Wars, obtem a quantidade de aparições e finaliza o processo de salvar.
+POST
 
-# edenirstofel-desafioB2W_api_rest
-# Desafio_b2w_api_starWars
-# edenirstofel-Desafio_b2w_api_starWars
-#Desafio_b2w_api_starWars
+Exemplo:
+
+{ "nome": "Endor", 
+"clima": "temperate", 
+"terreno": "forests, mountains, lakes" }
+
+** **Listar os planetas  : http://localhost:8080/planetas
+
+Exemplo:
+
+{"id":"5e7938a90b907c27fd7e786e","nome":"Alderaan","clima":"temperate, 
+     tropical","terreno":"jungle, rainforests","quantidadeAparicao":2}
+
+** **Buscar por nome : http://localhost:8080/planetas/{buscanome}/nome
+
+Exemplo:
+http://localhost:8080/planetas/buscanome?nome=Alderaan
+
+{"id":"5e7938a90b907c27fd7e786e","nome":"Alderaan","clima":"temperate, tropical","terreno":"jungle, rainforests",
+  "quantidadeAparicao":2}
+
+** **Buscar por ID:http://localhost:8080/planetas/{id}
+
+Exemplo:
+
+http://localhost:8080/planetas/5e7938a90b907c27fd7e786e
+
+{"id":"5e7938a90b907c27fd7e786e","nome":"Alderaan","clima":"temperate, tropical","terreno":"jungle, rainforests","quantidadeAparicao":2}
+
+** **Remover planeta :http://localhost:8080/planetas/{id}
+
+Exemplo :
+
+DELETE : http://localhost:8080/planetas/5e7938a90b907c27fd7e786e
+
+Caso esse planeta não exista ele retornará o erro 404 não encontrado.
+
+
+
+
+
