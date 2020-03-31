@@ -1,4 +1,4 @@
-#**Desafio  B2W Api Rest
+#DesafioB2W Api Rest
 
 #** **Descrição
 
@@ -32,7 +32,7 @@ Criar um jogo com algumas informações da franquia. Para possibilitar  a equipe
 
 #** **API Rest
 
--** **Adicionar um planeta: http://localhost:8080/planetas 
+-Adicionar um planeta: http://localhost:8080/planetas 
 
 POST
 
@@ -42,7 +42,7 @@ Exemplo:
 "clima": "temperate", 
 "terreno": "forests, mountains, lakes" }
 
-** **Listar os planetas  : http://localhost:8080/planetas
+-Listar os planetas  : http://localhost:8080/planetas
 
 Exemplo:
 
@@ -57,7 +57,7 @@ http://localhost:8080/planetas/buscanome?nome=Alderaan
 {"id":"5e7938a90b907c27fd7e786e","nome":"Alderaan","clima":"temperate, tropical","terreno":"jungle, rainforests",
   "quantidadeAparicao":2}
 
-** **Buscar por ID:http://localhost:8080/planetas/{id}
+-Buscar por ID:http://localhost:8080/planetas/{id}
 
 Exemplo:
 
@@ -65,7 +65,7 @@ http://localhost:8080/planetas/5e7938a90b907c27fd7e786e
 
 {"id":"5e7938a90b907c27fd7e786e","nome":"Alderaan","clima":"temperate, tropical","terreno":"jungle, rainforests","quantidadeAparicao":2}
 
-** **Remover planeta :http://localhost:8080/planetas/{id}
+-Remover planeta :http://localhost:8080/planetas/{id}
 
 Exemplo :
 
