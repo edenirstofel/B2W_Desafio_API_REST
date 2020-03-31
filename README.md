@@ -1,4 +1,4 @@
-API-desafio-B2W
+# desafioB2W_api_rest
 Tecnologias utilizadas:
 
 *Java 8 *Spring Boot *Spring Data MongoDB
@@ -27,5 +27,4 @@ Remover planeta : (DELETE) http://localhost:8080/planetas/{id}
 Consumindo a API de terceiro: https://swapi.co/ :
 
 Ao salvar planeta, ele se comunica com API do Star Wars, obtem a quantidade de aparições e finaliza o processo de salvar.# desafioB2W_api_rest
-# desafioB2W_api_rest
-# desafioB2W_api_rest
+
