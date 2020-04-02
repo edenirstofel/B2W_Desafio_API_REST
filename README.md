@@ -7,12 +7,12 @@
 
 **Tecnologias utilizadas**
 
--Java 1.8
--Spring Data MongoDB 
--Spring Boot 2.2.5
--Junit4
--Postman
--IDEA Spring Tool Suit 4 (STS)
+- Java 1.8
+- Spring Data MongoDB 
+- Spring Boot 2.2.5
+- Junit4
+- Postman
+- IDEA Spring Tool Suit 4 (STS)
 
 
 **Informações para utilizar a API**
