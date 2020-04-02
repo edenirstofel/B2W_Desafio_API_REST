@@ -43,11 +43,10 @@ Ir na classe **_PlanetaControllerTest_** e rodar o projeto com JUNI4, o sistema 
 *"clima": "temperate",* 
 *"terreno": "forests, mountains, lakes" }*
 
-Se for incluido  um nome, clima ou terreno com caractere vazio ou null na API, ela retornara mensagem de erro 
+Se for incluido  um nome, clima ou terreno com caractere vazio ou null na API, ela retornará mensagem de erro 
 "O campo <> nao pode esta vazio". 
 
-É permitido incluir um planeta que não apareceu nos filmes,porém a quantidade de apariçao  será 0.
-
+Um planeta que não apareceu nos filmes também pode ser criado, porém seu número de aparições será o valor igual 0.
 
 - Listar os planetas  : http://localhost:8080/planetas
 
@@ -65,9 +64,7 @@ Se for incluido  um nome, clima ou terreno com caractere vazio ou null na API, e
   
   Ao buscar um planeta com nome inexistente ou vazio a API retornará uma mensagem de erro: "Planeta nao encontrado"
   
-  
-   
-    Um planeta que não apareceu nos filmes também pode ser criado, porém seu numero de aparições será automaticamente 0.
+
 
 - Buscar por ID:http://localhost:8080/planetas/{id}
 
@@ -79,6 +76,6 @@ Ao buscar um planeta com ID inexistente ou vazio a API retornará uma mensagem d
 
 - Remover planeta :http://localhost:8080/planetas/{id}
 
-ao deletar um planeta com ID inexistente ou vazio a API retornará uma mensagem de erro: "Id nao encontrado."
+Ao deletar um planeta com ID inexistente ou vazio a API retornará uma mensagem de erro: "Id nao encontrado."
 
 
