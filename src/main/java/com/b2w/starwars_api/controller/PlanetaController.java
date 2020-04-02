@@ -7,7 +7,6 @@ import java.util.Optional;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,17 +36,18 @@ public class PlanetaController {
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Optional<Planeta>> findById(@PathVariable("id") String id) {
 		Optional<Planeta> planeta = planetaService.findById(id);
-		if (planeta != null)
+		if (planeta != null) {
 			return ResponseEntity.ok(planeta);
-		else
+		} else {
 			return ResponseEntity.notFound().build();
+		}
 	}
 
 	@GetMapping(value = "/buscanome")
-	public ResponseEntity<List<Planeta>> findByName(@RequestParam(value = "nome") String nome) {
-		List<Planeta> listPlaneta = planetaService.findByName(nome);
-		if (listPlaneta != null) {
-			return new ResponseEntity<>(listPlaneta, HttpStatus.OK);
+	public ResponseEntity<Optional<Planeta>> findByName(@RequestParam(value = "nome") String nome) {
+		Optional<Planeta> planeta = planetaService.findByName(nome);
+		if (planeta != null) {
+			return ResponseEntity.ok(planeta);
 		} else {
 			return ResponseEntity.notFound().build();
 		}
@@ -67,10 +67,8 @@ public class PlanetaController {
 			planetaService.deletePlaneta(id);
 			return ResponseEntity.noContent().build();
 		} else {
-
 			return ResponseEntity.notFound().build();
 		}
-
 	}
 
 }
