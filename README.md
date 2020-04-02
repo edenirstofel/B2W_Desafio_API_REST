@@ -16,10 +16,9 @@
 
 
 **Informações para utilizar a API**
-
--Para utilizar a API é necessário configurar o servidor do MongoDB
--A API está considerando que o mongodb local estará na sua porta padrão (27017)
--Arquivo de configuração application.properties do Spring : spring.data.mongodb.uri=mongodb://localhost:27017/apistarwars
+- Para utilizar a API é necessário configurar o servidor do MongoDB
+- A API está considerando que o mongodb local estará na sua porta padrão (27017)
+- Arquivo de configuração application.properties do Spring : spring.data.mongodb.uri=mongodb://localhost:27017/apistarwars
 
 
 **Funcionalidades desenvolvidas**
