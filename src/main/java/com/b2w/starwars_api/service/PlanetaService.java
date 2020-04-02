@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.b2w.starwars_api.exception.PlanetaNotFoundException;
 import com.b2w.starwars_api.model.Planeta;
 import com.b2w.starwars_api.repository.PlanetaRepository;
 
@@ -26,17 +27,15 @@ public class PlanetaService {
 	}
 
 	public Optional<Planeta> findById(String id) {
+		encontraPorId(id);
 		Optional<Planeta> p = planetaRepository.findById(id);
-
-		if (p == null) {
-			return null;
-		}
 		return p;
 	}
 
-	public List<Planeta> findByName(String nome) {
-
-		return planetaRepository.nome(nome);
+	public Optional<Planeta> findByName(String nome) {
+		encontraPorNome(nome);
+		Optional<Planeta> p = planetaRepository.nome(nome);
+		return p;
 	}
 
 	public Planeta createPlaneta(Planeta planeta) {
@@ -49,6 +48,17 @@ public class PlanetaService {
 	}
 
 	public void deletePlaneta(String id) {
-		planetaRepository.deleteById(id);
+		planetaRepository.delete(encontraPorId(id));
 	}
+
+	public Planeta encontraPorId(String id) {
+		Optional<Planeta> obj = planetaRepository.findById(id);
+		return obj.orElseThrow(() -> new PlanetaNotFoundException("Id nao encontrado."));
+	}
+
+	public Planeta encontraPorNome(String value) {
+		Optional<Planeta> obj = planetaRepository.nome(value);
+		return obj.orElseThrow(() -> new PlanetaNotFoundException("Planeta nao encontrado."));
+	}
+
 }
