@@ -29,11 +29,14 @@
 - Buscar por ID
 - Remover planeta
 
+***Teste**
+Ir na classe _PlanetaControllerTest_ e rodar o projeto com JUNI4, o sistema efetuará alguns testes de integração e alguns testes unitários, retornando verde se tudo deu certo ou vermelho se algo deu errado.
+
 ***API Rest***
 
 - Adicionar um planeta: http://localhost:8080/planetas 
 
-*Exemplo:*
+*Body:*
 
 *{ "nome": "Endor",* 
 *"clima": "temperate",* 
@@ -41,36 +44,24 @@
 
 - Listar os planetas  : http://localhost:8080/planetas
 
-*Exemplo:*
+*Retorno:*
 
 *{"id":"5e7938a90b907c27fd7e786e","nome":"Alderaan","clima":"temperate, 
      tropical","terreno":"jungle, rainforests","quantidadeAparicao":2}*
 
-Buscar por nome : http://localhost:8080/planetas/{buscanome}/nome
+- Buscar por nome : http://localhost:8080/planetas/{buscanome}/nome
 
-*Exemplo:*
-http://localhost:8080/planetas/buscanome?nome=Alderaan
+*Retorno:*
 
 *{"id":"5e7938a90b907c27fd7e786e","nome":"Alderaan","clima":"temperate, tropical","terreno":"jungle, rainforests",
   "quantidadeAparicao":2}*
 
 - Buscar por ID:http://localhost:8080/planetas/{id}
 
-*Exemplo:*
-
-http://localhost:8080/planetas/5e7938a90b907c27fd7e786e
+*Retorno:*
 
 *{"id":"5e7938a90b907c27fd7e786e","nome":"Alderaan","clima":"temperate, tropical","terreno":"jungle, rainforests","quantidadeAparicao":2}*
 
 - Remover planeta :http://localhost:8080/planetas/{id}
-
-*Exemplo :*
-
- http://localhost:8080/planetas/5e7938a90b907c27fd7e786e
-
-Caso esse planeta não exista ele retornará o erro 404 não encontrado.
-
-
-
 
 
