@@ -29,7 +29,7 @@
 - Buscar por ID
 - Remover planeta
 
-***Teste**
+***Teste***
 Ir na classe _PlanetaControllerTest_ e rodar o projeto com JUNI4, o sistema efetuará alguns testes de integração e alguns testes unitários, retornando verde se tudo deu certo ou vermelho se algo deu errado.
 
 ***API Rest***
