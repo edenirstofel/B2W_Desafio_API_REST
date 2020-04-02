@@ -16,7 +16,7 @@ public class Planeta {
 
 	@Id
 	private String id; //
-	@NotBlank(message= "O campo nome nao ode esta vazio")
+	@NotBlank(message= "O campo nome nao pode esta vazio")
 	private String nome; //
 	@NotBlank(message= "O campo clima nao pode esta vazio")
 	private String clima; //
