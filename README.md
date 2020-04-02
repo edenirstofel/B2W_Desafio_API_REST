@@ -21,7 +21,7 @@
 - Arquivo de configuração application.properties do Spring :*spring.data.mongodb.uri=mongodb://localhost:27017/apistarwars*
 
 
-**Funcionalidades desenvolvidas**
+***Funcionalidades desenvolvidas***
 - Adicionar um planeta (com nome, clima e terreno)
 (ao adicinar um planeta a API se comunica com API do Star Wars (https://swapi.co/),obtem a quantidade de aparições e finaliza o processo de salvar)
 - Listar planetas
@@ -33,22 +33,22 @@
 
 -Adicionar um planeta: http://localhost:8080/planetas 
 
-*Exemplo:
+*Exemplo:*
 
-{ "nome": "Endor", 
-"clima": "temperate", 
-"terreno": "forests, mountains, lakes" }*
+*{ "nome": "Endor",* 
+*"clima": "temperate",* 
+*"terreno": "forests, mountains, lakes" }*
 
 -Listar os planetas  : http://localhost:8080/planetas
 
-*Exemplo:
+*Exemplo:*
 
-{"id":"5e7938a90b907c27fd7e786e","nome":"Alderaan","clima":"temperate, 
+*{"id":"5e7938a90b907c27fd7e786e","nome":"Alderaan","clima":"temperate, 
      tropical","terreno":"jungle, rainforests","quantidadeAparicao":2}*
 
 Buscar por nome : http://localhost:8080/planetas/{buscanome}/nome
 
-Exemplo:
+*Exemplo:*
 http://localhost:8080/planetas/buscanome?nome=Alderaan
 
 *{"id":"5e7938a90b907c27fd7e786e","nome":"Alderaan","clima":"temperate, tropical","terreno":"jungle, rainforests",
@@ -56,7 +56,7 @@ http://localhost:8080/planetas/buscanome?nome=Alderaan
 
 -Buscar por ID:http://localhost:8080/planetas/{id}
 
-Exemplo:
+*Exemplo:*
 
 http://localhost:8080/planetas/5e7938a90b907c27fd7e786e
 
@@ -64,9 +64,9 @@ http://localhost:8080/planetas/5e7938a90b907c27fd7e786e
 
 -Remover planeta :http://localhost:8080/planetas/{id}
 
-Exemplo :
+*Exemplo :*
 
-DELETE : http://localhost:8080/planetas/5e7938a90b907c27fd7e786e
+ http://localhost:8080/planetas/5e7938a90b907c27fd7e786e
 
 Caso esse planeta não exista ele retornará o erro 404 não encontrado.
 
