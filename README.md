@@ -43,7 +43,7 @@ Ir na classe **_PlanetaControllerTest_** e rodar o projeto com JUNI4, o sistema 
 *"clima": "temperate",* 
 *"terreno": "forests, mountains, lakes" }*
 
-Se for incluido  um nome, clima ou terreno com caractere vazio ou null na API, ela retornará mensagem de erro 
+Se for incluído  um nome, clima ou terreno com caractere vazio ou null na API, ela retornará mensagem de erro 
 "O campo <> nao pode esta vazio". 
 
 Um planeta que não apareceu nos filmes também pode ser criado, porém seu número de aparições será o valor igual 0.
